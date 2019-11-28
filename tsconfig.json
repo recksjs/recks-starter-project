@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": false,
+        "noUnusedLocals": false,
+        "moduleResolution": "node",
+        "module": "es6",
+        "target": "es5",
+        "allowJs": true,
+        "sourceMap": true,
+        "jsx": "react",
+        "jsxFactory": "Recks.createElement",
+        "downlevelIteration": true,
+        "lib": [
+            "dom",
+            "dom.iterable"
+        ]
+    }
+}

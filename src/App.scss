@@ -1,0 +1,26 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    &-header {
+        flex-basis: 25vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+        h1, h2 {
+            margin: 0;
+        }
+    }
+
+    &-body {
+        text-align: center;
+        padding-top: 3rem;
+        flex-grow: 1;
+        background: #f2f6f9;
+    }
+}
