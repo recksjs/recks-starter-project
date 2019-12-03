@@ -1,6 +1,6 @@
 {
   "name": "recks-starter-project",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A starter project for recks framework",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "webpack-merge": "4.2.2"
   },
   "dependencies": {
-    "recks": "",
+    "recks": "0.0.3",
     "rxjs": "^6.5.3"
   }
 }
