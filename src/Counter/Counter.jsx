@@ -1,22 +1,38 @@
 import Recks from 'recks';
 import { Subject } from 'rxjs';
-import { startWith, scan } from 'rxjs/operators';
+import { map, scan, startWith } from 'rxjs/operators';
 import './Counter.scss';
 
 
-function Counter() {
+function SheepCounter() {
     const input$ = new Subject();
-    const view$ =
-        input$.pipe(
-            startWith(0),
-            scan((acc, curr) => acc + curr)
-        );
+    const count$ = input$.pipe(
+        startWith(2),
+        scan((acc, curr) => acc + curr),
+    );
+
+    const herd$ = count$.pipe(
+        map(count => {
+            if (count < 0) {
+                return '  🦔';
+            }
+
+            const herd = '🐑🐑🐑🐑🐑🐑🐑      🐄🐐🐖🦃🐓      🐇🐇';
+            return herd.slice(0, count * 2);
+        })
+    );
 
     return <div class="counter">
-        <button onClick={() => input$.next(-1)}>-</button>
-        { view$ }
-        <button onClick={() => input$.next( 1)}>+</button>
+        <h1>Sheep counter</h1>
+
+        <p class="counter-controls">
+            <button title="less sheep" onClick={() => input$.next(-1)}>-</button>
+            <span title="count" class="counter-count">{ count$ }</span>
+            <button title="more sheep" onClick={() => input$.next( 1)}>+</button>
+        </p>
+
+        <p title="herd" class="counter-sheep">🐕{ herd$ }</p>
     </div>
 }
 
-export { Counter }
+export { SheepCounter as Counter };

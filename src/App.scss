@@ -2,25 +2,62 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    max-width: 480px;
+    margin: auto;
 
-    &-header {
-        flex-basis: 25vh;
-        text-align: center;
+    &__header {
+        padding: 0.5rem;
+        text-align: left;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-content: center;
-        justify-content: center;
+        flex-shrink: 1;
 
-        h1, h2 {
-            margin: 0;
+        &__title {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+
+            h2 {
+                margin: 0;
+                color: #bd2f0c;
+            }
+
+            h3 {
+                color: #8a185e;
+                margin: 0;
+            }
+        }
+
+        &__separator {
+            flex-grow: 1;
+        }
+
+        &__logo {
+            flex-shrink: 1;
         }
     }
 
-    &-body {
+    &__body {
         text-align: center;
         padding-top: 3rem;
         flex-grow: 1;
-        background: #f2f6f9;
+    }
+
+    &__footer {
+        padding: 0.5rem;
+        flex-shrink: 1;
+        text-align: center;
+    }
+
+    &__github-link {
+        color: #383838;
+        text-decoration: none;
+
+        &:hover, &:active {
+            text-decoration: underline;
+            color: #383838;
+        }
     }
 }

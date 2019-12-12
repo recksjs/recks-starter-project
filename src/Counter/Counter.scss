@@ -1,12 +1,29 @@
 .counter {
     font-size: 24px;
 
-    button {
-        font-size: inherit;
-        margin: 0 1rem;
-        background: #ffffff;
-        border-radius: 3px;
-        border: 1px solid #b2deff;
-        width: 2rem;
+    &-controls {
+        button {
+            font-size: inherit;
+            margin: 0 1rem;
+            background: #ffffff;
+            border-radius: 3px;
+            border: 1px solid #d63898;
+            width: 2rem;
+
+            &:active, &:focus {
+                outline: none;
+                box-shadow: 0 0 0px 2px #ebd5ff;
+            }
+        }
+    }
+
+    &-count {
+        display: inline-block;
+        min-width: 2rem;
+    }
+
+    &-sheep {
+        padding: 0.5rem;
+        transform: scale(-1, 1);
     }
 }
