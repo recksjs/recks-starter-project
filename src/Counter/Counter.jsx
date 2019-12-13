@@ -17,8 +17,9 @@ function SheepCounter() {
                 return '  🦔';
             }
 
-            const herd = '🐑🐑🐑🐑🐑🐑🐑      🐄🐐🐖🦃🐓      🐇🐇';
-            return herd.slice(0, count * 2);
+            const herd = '🐑🐑🐑🐑🐑🐑🐑🌲🌳🌲🐄🐐🐖🦃🐓🌲🌳🌲🌳🌲🐇🐇';
+            const forest =  '🌲🌳'.repeat(Math.max(0 , count - herd.length / 2));
+            return (herd + forest).slice(0, count * 2);
         })
     );
 
