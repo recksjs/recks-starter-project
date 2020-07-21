@@ -32,13 +32,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new CopyPlugin([
-            {
-                from: path.resolve(__dirname, '../public/**/*'),
-                to: '../dist',
-                flatten: true,
-                copyUnmodified: true
-            }
-        ]),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, '../public/**/*'),
+                    to: '../dist',
+                    flatten: true,
+                    force: true
+                }
+            ]
+        }),
     ]
 };
