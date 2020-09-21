@@ -1,7 +1,7 @@
 import Recks from 'recks';
+import './App.scss';
 import { Counter } from './Counter/Counter';
 import { Logo } from './Logo/Logo';
-import './App.scss';
 
 function App () {
     return <div class="app">
@@ -24,4 +24,4 @@ function App () {
     </div>
 }
 
-export { App }
+export { App };

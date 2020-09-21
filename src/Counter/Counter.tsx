@@ -4,8 +4,8 @@ import { map, scan, startWith } from 'rxjs/operators';
 import './Counter.scss';
 
 
-function SheepCounter() {
-    const input$ = new Subject();
+function Counter() {
+    const input$ = new Subject<number>();
     const count$ = input$.pipe(
         startWith(2),
         scan((acc, curr) => acc + curr),
@@ -36,4 +36,4 @@ function SheepCounter() {
     </div>
 }
 
-export { SheepCounter as Counter };
+export { Counter };

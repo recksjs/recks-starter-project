@@ -28,7 +28,7 @@
     "webpack-merge": "5.0.9"
   },
   "dependencies": {
-    "recks": "0.0.9",
+    "recks": "0.0.14",
     "rxjs": "6.6.0"
   }
 }

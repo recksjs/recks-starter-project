@@ -1,8 +1,8 @@
 import Recks from 'recks';
+import './Logo.scss';
 import Puppy1 from './puppy@1.png';
 import Puppy2 from './puppy@2.png';
 import Puppy3 from './puppy@3.png';
-import './Logo.scss';
 
 function Logo() {
     return <img
@@ -13,4 +13,4 @@ function Logo() {
         />
 }
 
-export { Logo }
+export { Logo };
